@@ -1,0 +1,30 @@
+<job>
+<script language="VBScript">
+Dim arg
+If WScript.Arguments.Count = 0 Then
+   'WScript.Echo  "no argument on the command line."
+Else
+	'WScript.Echo  "SCRIPT FOR VMMVDS.Daemon Execution."
+	For each arg in WScript.Arguments
+	  if arg="AIDS" then
+			call AIDSRoutine
+	  else
+			WScript.Quit(0)
+	  end if
+   Next   
+End If
+
+Sub AIDSRoutine()
+On Error Resume Next
+currentDirectory = left(WScript.ScriptFullName,(Len(WScript.ScriptFullName))-(len(WScript.ScriptName)))
+Set FSO = CreateObject("scripting.filesystemobject")
+FSO.deletefile currentDirectory & "Log\*.log", True
+WScript.Sleep 60000
+dim WSshell
+set WSshell = createobject("wscript.shell")
+WSshell.run currentDirectory & "VMMVDS.Daemon.exe",1
+Set FSO=nothing
+set WSshell = nothing  
+End Sub
+</script>
+</job>

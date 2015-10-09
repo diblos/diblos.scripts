@@ -1,0 +1,25 @@
+<job>
+<script language="VBScript">
+Dim tmpSubPath
+currentDirectory = "D:\Backups\tempo\"
+Set FSO = CreateObject("scripting.filesystemobject")
+
+Set oFolder = fso.GetFolder(currentDirectory)
+For Each oFile In oFolder.files
+	tmpSubPath = currentDirectory & datepart("yyyy",oFile.DateCreated) & "\" & datepart("M",oFile.DateCreated) & "\" & datepart("d",oFile.DateCreated) & "\" & datepart("H",oFile.DateCreated)  & "\"
+	CreateFolder(tmpSubPath)
+	FSO.MoveFile currentDirectory & oFile.Name, tmpSubPath & oFile.Name
+Next
+
+Sub CreateFolder( strPath )
+On Error Resume Next
+	If strPath <> "" Then 'Fixes endless recursion in some instances when at lowest directory
+		If Not FSO.FolderExists( FSO.GetParentFolderName(strPath) ) then Call CreateFolder( FSO.GetParentFolderName(strPath) )
+		FSO.CreateFolder( strPath )
+	End If 
+End Sub
+</script>
+<script language="JScript">
+  WSH.echo("Supposed all files have been moved :)");
+</script>
+</job>

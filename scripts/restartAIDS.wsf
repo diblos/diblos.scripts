@@ -1,0 +1,56 @@
+<job>
+<script language="VBScript">
+Dim strComputer,strServiceName_1
+strComputer = "polri-aidsvr" ' Local Computer
+
+' Service
+strServiceName_1 = "OracleServiceXE"
+
+Dim arg
+If WScript.Arguments.Count = 0 Then
+   WScript.Echo  "no argument on the command line."
+Else
+	'WScript.Echo  "SCRIPT FOR VMMVDS.Daemon Execution."
+	For each arg in WScript.Arguments
+	  if arg="AIDS" then
+			call AIDSRoutine
+	  else
+			WScript.Quit(0)
+	  end if
+   Next   
+End If
+
+Sub AIDSRoutine()
+On Error Resume Next
+currentDirectory = left(WScript.ScriptFullName,(Len(WScript.ScriptFullName))-(len(WScript.ScriptName)))
+Set FSO = CreateObject("scripting.filesystemobject")
+FSO.deletefile currentDirectory & "Log\*.log", True
+
+do while isServiceRunning(strComputer,strServiceName_1) = false
+	WScript.Sleep 10000
+loop
+
+WScript.Sleep 60000
+
+dim WSshell
+set WSshell = createobject("wscript.shell")
+
+'--------------------------------------------------------------------------------------------
+WSshell.run currentDirectory & "VMMVDS.Daemon.exe",1
+Set FSO=nothing
+set WSshell = nothing  
+End Sub
+
+function isServiceRunning(strComputer,strServiceName)
+	Dim objWMIService, strWMIQuery
+	strWMIQuery = "Select * from Win32_Service Where Name = '" & strServiceName & "' and state='Running'"
+	Set objWMIService = GetObject("winmgmts:" _
+		& "{impersonationLevel=impersonate}!\\" & strComputer & "\root\cimv2")
+	if objWMIService.ExecQuery(strWMIQuery).Count > 0 then
+		isServiceRunning = true
+	else
+		isServiceRunning = false
+	end if
+end function
+</script>
+</job>

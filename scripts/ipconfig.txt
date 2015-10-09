@@ -1,0 +1,35 @@
+
+Windows IP Configuration
+
+        Host Name . . . . . . . . . . . . : itac-p023
+        Primary Dns Suffix  . . . . . . . : itac.itramas.com
+        Node Type . . . . . . . . . . . . : Unknown
+        IP Routing Enabled. . . . . . . . : No
+        WINS Proxy Enabled. . . . . . . . : No
+        DNS Suffix Search List. . . . . . : itac.itramas.com
+                                            itramas.com
+
+Ethernet adapter TeamViewer VPN:
+
+        Media State . . . . . . . . . . . : Media disconnected
+        Description . . . . . . . . . . . : TeamViewer VPN Adapter
+        Physical Address. . . . . . . . . : 00-FF-2D-8A-82-F6
+
+Ethernet adapter the LAN:
+
+        Connection-specific DNS Suffix  . : 
+        Description . . . . . . . . . . . : Broadcom 440x 10/100 Integrated Controller
+        Physical Address. . . . . . . . . : 00-1A-A0-0D-DC-C8
+        Dhcp Enabled. . . . . . . . . . . : No
+        IP Address. . . . . . . . . . . . : 192.168.62.111
+        Subnet Mask . . . . . . . . . . . : 255.255.255.0
+        IP Address. . . . . . . . . . . . : 192.130.12.50
+        Subnet Mask . . . . . . . . . . . : 255.255.255.0
+        IP Address. . . . . . . . . . . . : 192.130.11.112
+        Subnet Mask . . . . . . . . . . . : 255.255.255.0
+        IP Address. . . . . . . . . . . . : 192.168.8.112
+        Subnet Mask . . . . . . . . . . . : 255.255.254.0
+        Default Gateway . . . . . . . . . : 192.168.9.254
+        DNS Servers . . . . . . . . . . . : 192.168.8.252
+                                            202.188.0.133
+                                            192.168.8.252

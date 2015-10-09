@@ -1,0 +1,228 @@
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oracleXE)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=XE)(CID=(PROGRAM=C:\oraclexe\app\oracle\product\10.2.0\server\bin\sqlplus.exe)(HOST=ITAC-P023)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 10-APR-2014 12:32:53
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS:protocol adapter error
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: Protocol adapter error
+    nt secondary err code: 2
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oracleXE)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=XE)(CID=(PROGRAM=C:\oraclexe\app\oracle\product\10.2.0\server\bin\sqlplus.exe)(HOST=ITAC-P023)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 10-APR-2014 12:33:00
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS:protocol adapter error
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: Protocol adapter error
+    nt secondary err code: 2
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oracleXE)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=XE)(CID=(PROGRAM=C:\oraclexe\app\oracle\product\10.2.0\server\bin\sqlplus.exe)(HOST=ITAC-P023)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 10-APR-2014 12:33:01
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS:protocol adapter error
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: Protocol adapter error
+    nt secondary err code: 2
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12545, connecting to:
+ (DESCRIPTION=(CONNECT_DATA=(SERVICE_NAME=)(CID=(PROGRAM=C:\oraclexe\app\oracle\product\10.2.0\server\bin\sqlplus.exe)(HOST=ITAC-P023)(USER=Administrator)))(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.8.39)(PORT=1521\llm)))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 10-APR-2014 12:33:16
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12545
+    TNS-12545: Connect failed because target host or object does not exist
+    ns secondary err code: 12560
+    nt main err code: 515
+    TNS-00515: Connect failed because target host or object does not exist
+    nt secondary err code: 1004
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oracleXE)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=XE)(CID=(PROGRAM=C:\oraclexe\app\oracle\product\10.2.0\server\bin\sqlplus.exe)(HOST=ITAC-P023)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 10-APR-2014 12:33:20
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS:protocol adapter error
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: Protocol adapter error
+    nt secondary err code: 2
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oracleXE)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=XE)(CID=(PROGRAM=C:\oraclexe\app\oracle\product\10.2.0\server\bin\sqlplus.exe)(HOST=ITAC-P023)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 10-APR-2014 12:33:20
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS:protocol adapter error
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: Protocol adapter error
+    nt secondary err code: 2
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oracleXE)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=XE)(CID=(PROGRAM=C:\oraclexe\app\oracle\product\10.2.0\server\bin\sqlplus.exe)(HOST=ITAC-P023)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 10-APR-2014 12:33:38
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS:protocol adapter error
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: Protocol adapter error
+    nt secondary err code: 2
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oracleXE)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=XE)(CID=(PROGRAM=C:\oraclexe\app\oracle\product\10.2.0\server\bin\sqlplus.exe)(HOST=ITAC-P023)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 10-APR-2014 12:33:39
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS:protocol adapter error
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: Protocol adapter error
+    nt secondary err code: 2
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oracleXE)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=XE)(CID=(PROGRAM=C:\oraclexe\app\oracle\product\10.2.0\server\bin\sqlplus.exe)(HOST=ITAC-P023)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 10-APR-2014 12:33:39
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS:protocol adapter error
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: Protocol adapter error
+    nt secondary err code: 2
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12545, connecting to:
+ (DESCRIPTION=(CONNECT_DATA=(SERVICE_NAME=)(CID=(PROGRAM=C:\oraclexe\app\oracle\product\10.2.0\server\bin\sqlplus.exe)(HOST=ITAC-P023)(USER=Administrator)))(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.8.39)(PORT=1521\llm)))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 10-APR-2014 12:34:24
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12545
+    TNS-12545: Connect failed because target host or object does not exist
+    ns secondary err code: 12560
+    nt main err code: 515
+    TNS-00515: Connect failed because target host or object does not exist
+    nt secondary err code: 1004
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oracleXE)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=XE)(CID=(PROGRAM=C:\oraclexe\app\oracle\product\10.2.0\server\bin\sqlplus.exe)(HOST=ITAC-P023)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 10-APR-2014 12:34:58
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS:protocol adapter error
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: Protocol adapter error
+    nt secondary err code: 2
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12560, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=BEQ)(PROGRAM=oracle)(ARGV0=oracleXE)(ARGS='(DESCRIPTION=(LOCAL=YES)(ADDRESS=(PROTOCOL=beq)))'))(CONNECT_DATA=(SID=XE)(CID=(PROGRAM=C:\oraclexe\app\oracle\product\10.2.0\server\bin\sqlplus.exe)(HOST=ITAC-P023)(USER=Administrator))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.2.0.1.0 - Production
+	Oracle Bequeath NT Protocol Adapter for 32-bit Windows: Version 10.2.0.1.0 - Production
+  Time: 10-APR-2014 12:34:58
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12560
+    TNS-12560: TNS:protocol adapter error
+    ns secondary err code: 0
+    nt main err code: 530
+    TNS-00530: Protocol adapter error
+    nt secondary err code: 2
+    nt OS err code: 0
