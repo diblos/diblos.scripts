@@ -11,9 +11,9 @@ if (isset($_GET['ajax'])) {
   } else {
     fseek($handle, 0, SEEK_END);
     $_SESSION['offset'] = ftell($handle);
-  } 
+  }
   exit();
-} 
+}
 ?>
 <!doctype html>
 <html lang="en">
