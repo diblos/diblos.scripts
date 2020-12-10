@@ -6,10 +6,11 @@ PURPOSE IS TO DEVIDE FILES INTO SUBFOLDERS OF YEARS (YYYY)
 const path = require('path')
 const fs = require('fs')
 // joining path of directory
-const directoryPath = path.join(__dirname, 'combine')
+const rawPath = path.join(__dirname, 'torrents')
+const processedPath = path.join(__dirname, 'combine')
 const extFilename = '.torrent'
-// passsing directoryPath and callback function
-fs.readdir(directoryPath, (err, files) => {
+// passsing rawPath and callback function
+fs.readdir(rawPath, (err, files) => {
   // handling error
   if (err) {
     return console.log('Unable to scan directory: ' + err)
@@ -29,14 +30,14 @@ fs.readdir(directoryPath, (err, files) => {
 
   // create subs
   getSubs.forEach((sub) => {
-    var dir = path.join(directoryPath, sub)
+    var dir = path.join(processedPath, sub)
     if (!fs.existsSync(dir)) fs.mkdirSync(dir, 0744); // eslint-disable-line
   })
 
   // move file to subs
   m.forEach((file) => {
-    var oldPath = path.join(directoryPath, file.filename)
-    var newPath = path.join(directoryPath, file.sub, file.filename)
+    var oldPath = path.join(rawPath, file.filename)
+    var newPath = path.join(processedPath, file.sub, file.filename)
     fs.rename(oldPath, newPath, (err) => {
       if (err) throw err
       console.log(`Successfully moved: ${file.filename}`)
