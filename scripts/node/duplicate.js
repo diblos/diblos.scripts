@@ -21,8 +21,8 @@ fs.readdir(directoryPath, (err, files) => {
 
       // file structres
       const m = files.map(f => {
-        var m = f.indexOf('(')
-        var y = f.substr(0, m) || path.basename(f, extFilename)
+        const m = f.indexOf('(')
+        const y = f.substr(0, m) || path.basename(f, extFilename)
         return { filename: f, title: y.trim() }
       }).filter(d => {
         return path.extname(d.filename) === extFilename
