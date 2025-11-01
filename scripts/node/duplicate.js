@@ -9,7 +9,7 @@ const fs = require('fs')
 const directoryPath = path.join(__dirname, 'combine')
 const extFilename = '.torrent'
 // directory subs
-fs.readdir(directoryPath, (err, files) => {
+fs.readdir(directoryPath, async (err, files) => {
   if (err) return console.log('Unable to scan directory: ' + err)
   // get year sub directories
   const subPaths = files.filter((d) => Number(d))
