@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Audio Buzz Generator</title>
+</head>
+<body>
+
+    <button onclick="playBuzz()">Play Buzz Sound</button>
+    <button onclick="stopBuzz()">Stop Buzz Sound</button>
+
+    <button onclick="playHorn()">Play Horn Sound</button>
+    <button onclick="stopHorn()">Stop Horn Sound</button>
+
+    <script>
+        // Global variables for the audio context and oscillator
+        let audioContext;
+        let oscillator;
+        let gainNode;
+        let filter;
+
+        function initializeAudioContext() {
+            // Check if the AudioContext is already initialized
+            if (!audioContext) {
+                // For cross-browser compatibility, use the standard or prefixed version
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            }
+        }
+
+        function playBuzz() {
+            // 1. Ensure Audio Context is ready
+            initializeAudioContext();
+
+            // Prevent stacking multiple buzzes if the button is mashed
+            if (oscillator) {
+                // If an oscillator exists, stop and clean up the old one
+                stopBuzz(); 
+            }
+
+            // 2. Create the main audio source (The Buzz)
+            // A sawtooth wave has rich harmonics, which is good for a buzzing sound.
+            oscillator = audioContext.createOscillator();
+            oscillator.type = 'sawtooth'; 
+            
+            // Set a low frequency for the buzzing effect (e.g., 50 Hz to 100 Hz)
+            // oscillator.frequency.setValueAtTime(80, audioContext.currentTime); 
+            oscillator.frequency.setValueAtTime(1000, audioContext.currentTime); 
+
+            // 3. Create a Gain Node for volume control
+            gainNode = audioContext.createGain();
+            // Start at a low volume for a less jarring experience
+            gainNode.gain.setValueAtTime(0.05, audioContext.currentTime);
+
+            // 4. Create a Filter (Optional but enhances the "buzz")
+            // A low-pass filter can remove high-frequency harshness and shape the sound.
+            filter = audioContext.createBiquadFilter();
+            filter.type = 'lowpass';
+            // Set the cutoff frequency (adjust this for different buzz tones)
+            filter.frequency.setValueAtTime(500, audioContext.currentTime); 
+            filter.Q.setValueAtTime(1, audioContext.currentTime); // Resonance
+
+            // 5. Connect the nodes: Oscillator -> Filter -> Gain -> Destination
+            oscillator.connect(filter);
+            filter.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+
+            // 6. Start the oscillator
+            oscillator.start();
+        }
+
+        function stopBuzz() {
+            if (oscillator) {
+                // Use a quick ramp down for a click-free stop (Simple decay envelope)
+                gainNode.gain.exponentialRampToValueAtTime(
+                    0.0001, 
+                    audioContext.currentTime + 0.1 // Decay over 100 milliseconds
+                );
+
+                // Stop the oscillator after the decay
+                oscillator.stop(audioContext.currentTime + 0.1); 
+                
+                // Clear the reference
+                oscillator = null;
+            }
+        }
+
+        function playHorn() {
+            initializeAudioContext();
+
+            // Prevent stacking multiple horns
+            if (oscillator) {
+                stopHorn(); 
+            }
+
+            // 1. Create the main audio source
+            oscillator = audioContext.createOscillator();
+            
+            // **CHANGE:** Use a 'square' wave for a more electronic/brassy horn sound
+            oscillator.type = 'square'; 
+            
+            // Set the base frequency (e.g., 440 Hz for a standard "A" note)
+            const baseFrequency = 440;
+            oscillator.frequency.setValueAtTime(baseFrequency, audioContext.currentTime); 
+
+            // 2. Create a Gain Node for volume control
+            gainNode = audioContext.createGain();
+            gainNode.gain.setValueAtTime(0.1, audioContext.currentTime); // Moderate volume
+
+            // 3. Connect the nodes: Oscillator -> Gain -> Destination
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+
+            // 4. Implement the "Horn/Siren" effect (Frequency Modulation)
+            const attackTime = 0.05; // Quick onset
+            const decayTime = 0.5; // Half-second sweep duration
+            
+            // Ramp the frequency up slightly for the initial "honk"
+            oscillator.frequency.exponentialRampToValueAtTime(
+                baseFrequency * 1.05, // Up to 5% higher pitch
+                audioContext.currentTime + attackTime
+            );
+
+            // Then, sweep the frequency down for the characteristic horn sound
+            oscillator.frequency.exponentialRampToValueAtTime(
+                baseFrequency * 0.9, // Down to 10% lower pitch
+                audioContext.currentTime + attackTime + decayTime
+            );
+            
+            // Schedule the oscillator to stop after the sweep is complete
+            oscillator.stop(audioContext.currentTime + attackTime + decayTime + 0.01);
+
+            // 5. Start the oscillator
+            oscillator.start();
+        }
+
+        function stopHorn() {
+            if (oscillator) {
+                // Smoothly reduce volume to prevent clicks
+                gainNode.gain.exponentialRampToValueAtTime(
+                    0.0001, 
+                    audioContext.currentTime + 0.1 
+                );
+
+                // Stop the oscillator after the decay
+                oscillator.stop(audioContext.currentTime + 0.1); 
+                
+                // Clear the reference
+                oscillator = null;
+            }
+        }
+
+    </script>
+
+</body>
+</html>
